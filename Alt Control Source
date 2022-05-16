@@ -206,6 +206,9 @@ local o = {
         "-271,0,-341",
         "-281,0,-341"
     },
+    Train = {
+        "605.172, 36.473, -155.798",
+    },
     Admin = {
         "-826,-40,-617",
         "-826,-40,-605",
@@ -625,7 +628,7 @@ local function p(n, q)
                     local function W()
                         O = O + 1
                     end
-                    local X = {admin = "Admin", court = "Court", club = "Club", bank = "Bank"}
+                    local X = {admin = "Admin", court = "Court", train = "Train", club = "Club", bank = "Bank, "}
                     local Y = X[string.lower(n[2])]
                     for r, s in pairs(P) do
                         if s == a.Name then
