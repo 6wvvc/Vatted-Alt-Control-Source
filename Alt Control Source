@@ -392,6 +392,15 @@ local function p(n, q)
                     )
                 )()
             end
+        elseif n == Settings["Prefix"] .. "counter" then
+            if not b then
+                loadstring(
+                    game:HttpGet(
+                        "https://raw.githubusercontent.com/JVSXNWRLD/Da-Hood-Low-GFX/main/Da%20Hood%20Low%20GFX"
+                        
+                    )
+                end
+            end
         elseif n == Settings["Prefix"] .. "unad" then
             if not b then
                 l["LoopMsg"] = false
