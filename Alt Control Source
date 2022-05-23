@@ -517,6 +517,31 @@ local function p(n, q)
                     end
                 end
             end
+        elseif n == Settings["Prefix"] .. "cdestroy" then
+            if not b then
+            for i,Child in pairs(workspace.Ignored.Drop:GetChildren()) do
+							Child.Transparency = 1
+							for i,FX in pairs(Child:GetChildren()) do
+								if FX:IsA("Decal") then
+									FX:Destroy() 
+								end
+								if FX:IsA("BillboardGui") then
+									FX.Enabled = false
+								end 
+							end
+						end
+						workspace.Ignored.Drop.ChildAdded:Connect(function(Child)
+							wait()
+							Child.Transparency = 1
+							for i,FX in pairs(Child:GetChildren()) do
+								if FX:IsA("Decal") then
+									FX:Destroy() 
+								end
+								if FX:IsA("BillboardGui") then
+									FX.Enabled = false
+								end 
+							end
+						end)
         elseif n == Settings["Prefix"] .. "mask" then
             if not b then
                 local B = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
